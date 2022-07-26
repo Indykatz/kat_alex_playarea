@@ -2,7 +2,7 @@ export const signUp = async (signObj, setter) => {
   try {
     let path = process.env.REACT_APP_REST_API; //grab url from .env file http://localhost:5001/
     if (signObj.email) {
-      path += "user"; //add user to localhost path
+      path += "users"; //add user to localhost path
     } else {
       path += "login"; //add login to localhost path
     }
