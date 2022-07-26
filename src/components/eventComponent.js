@@ -11,7 +11,7 @@ const EventComponent = () => {
 
   const handleInterested = (index) => {};
 
-  const handleNotInterested = (index) => {};
+  // const handleNotInterested = (index) => {};
 
   return (
     <div>
@@ -19,11 +19,15 @@ const EventComponent = () => {
         return (
           // runs ToDoList component
           <EventMap
-            todoItem={contest.item}
-            todoChecked={contest.checked}
+            name={contest.name}
+            url={contest.url}
+            start_time={contest.start_time}
+            end_time={contest.end_time}
+            site={contest.site}
+            stauts={contest.staus}
             key={index}
             handleClick={() => handleInterested(index)}
-            handleCheck={() => handleNotInterested(index)}
+            // handleCheck={() => handleNotInterested(index)}
           />
         );
       })}
