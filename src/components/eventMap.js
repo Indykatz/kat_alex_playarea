@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const EventMap = ({
   name,
   url,
@@ -6,8 +8,11 @@ const EventMap = ({
   site,
   status,
   handleInterested,
-  handleNotInterested,
+
+  //   handleNotInterested,
 }) => {
+  const [goingBool, setGoingBool] = useState(false);
+  //   if ({ goingBool }) {
   return (
     <div>
       <div>
@@ -21,11 +26,14 @@ const EventMap = ({
           <li>Location: {site}</li>
           <li>Status: {status}</li>
         </ul>
-        <button onClick={handleInterested}>Interested</button>
-        <button onClick={handleNotInterested}>Not Interested</button>
+        <button onClick={handleInterested}>
+          {goingBool ? "Going" : "Not Going"}
+        </button>
+        {/* <button onClick={handleNotInterested}>Not Interested</button> */}
       </div>
     </div>
   );
 };
+// };
 
 export default EventMap;
